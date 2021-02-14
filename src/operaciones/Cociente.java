@@ -55,7 +55,7 @@ public class Cociente {
 		{@link Exception#getMessage()}
      */
 	public double division_Reales(double num1Real, double num2Real)throws Exception {
-		divisionReales=num1Real/num2Real;
+		
 		return divisionReales;
 	}//Cierre función division_Reales
 
@@ -77,7 +77,7 @@ public class Cociente {
 		{@link Exception#getMessage()}
      */
 	public int division_Enteros(int num1Entero, int num2Entero)throws Exception {
-		divisionEnteros=num1Entero/num2Entero;
+		
 		return divisionEnteros;
 	}//Cierre funcion division_Enteros
 	
@@ -98,6 +98,7 @@ public class Cociente {
      */
 
 	public double inverso_Numero(int numero)throws Exception {
+		
 		return inverso;
 	}//Cierre funcion inverso_Numero
 	
