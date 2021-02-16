@@ -20,7 +20,7 @@ public class Cociente {
 	/**@param divisionEnteros Será un valor entero resultante que nos devolverá la 
 	 * función division_Enteros()
 	 */
-	int divisionEnteros;
+	double divisionEnteros;
 	
 	/**@param inverso Será un valor real resultante que nos devolverá la 
 	 * función inverso_Numero()
@@ -55,7 +55,7 @@ public class Cociente {
 		{@link Exception#getMessage()}
      */
 	public double division_Reales(double num1Real, double num2Real)throws Exception {
-		
+		divisionReales=num1Real/num2Real;
 		return divisionReales;
 	}//Cierre función division_Reales
 
@@ -65,8 +65,8 @@ public class Cociente {
      NOTA:<p>Cuando un número es positivo y el otro es negativo, el cociente es negativo.
 			<p>Cuando ambos números son negativos, el cociente es positivo.
 			<p>Cuando ambos números son positivos, el cociente es positivo.
-			<p>Si el dividendo(num1Real) es cero, el cociente es infinito.
-			<p>Si el divisor (num2Real) es cero, el resultado da error.
+			<p>Si el dividendo(num1Real) es cero, el cociente es cero.
+			<p>Si el divisor (num2Real) es cero, el resultado da infinito.
 			<p>Si el cociente no es un número exacto, la función redondea 
 			al siguiente o anterior número.
      * @return Valor entero que nos devuelve la función o método (cociente)
@@ -76,29 +76,29 @@ public class Cociente {
 		Introducir un número real en vez de entero.  Introducir letras en vez de numeros.
 		{@link Exception#getMessage()}
      */
-	public int division_Enteros(int num1Entero, int num2Entero)throws Exception {
-		
+	public double division_Enteros(int num1Entero, int num2Entero)throws Exception {
+		divisionEnteros=(num1Entero/num2Entero);
 		return divisionEnteros;
 	}//Cierre funcion division_Enteros
 	
 	 /**
 
-     * Método que devuelve el resultado de calcular el inverso de un número entero 
+     * Método que devuelve el resultado de calcular el inverso de un número  
      * <p>NOTA:
      * Un número es inverso de otro si al multiplicarlos obtenemos como resultado la unidad. 
      * El elemento inverso, es igual a 1 partido por el número.
      	<p>Si el número introducido es negativo, el inverso es negativo. 
      * @return Valor que nos devuelve la función o método (cociente)
-     * @param numero Número entero que será el denominador en la operación
+     * @param numero real que será el denominador en la operación
      * y sobre el cual se calculará su número inverso
-     * @throws Exception -Numero mayor de 32 bits en numero. Introducir letras en vez de numeros.
+     * @throws Exception -Numero mayor de 64 bits en numero. Introducir letras en vez de numeros.
 		{@link Exception#getMessage()}
      * 
 
      */
 
-	public double inverso_Numero(int numero)throws Exception {
-		
+	public double inverso_Numero(double numero)throws Exception {
+		inverso=1/numero;
 		return inverso;
 	}//Cierre funcion inverso_Numero
 	
@@ -118,6 +118,7 @@ public class Cociente {
      */
 
 	public double raiz_Numero(double numero)throws Exception {
+		raizNumero=Math.sqrt(numero);
 		return raizNumero;
 
 	}//Cierre función raiz_Numero

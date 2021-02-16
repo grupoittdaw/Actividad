@@ -78,6 +78,11 @@ public class Producto {
 		{@link Exception#getMessage()}
      */
 	public int producto_Enteros(int num1Entero, int num2Entero)throws Exception {
+		try{
+		productoEnteros=num1Entero*num2Entero;
+		}catch (Exception e){
+			System.out.println("Has introducido un valor erroneo");
+		}
 		return productoEnteros;
 	}//Cierre funcion producto_Enteros
 	
@@ -98,6 +103,7 @@ public class Producto {
      */
 
 	public double producto_Real3(double num1Real,double num2Real,double num3Real)throws Exception {
+		productoReales3=num1Real*num2Real*num3Real;
 		return productoReales3;
 	}//Cierre funcion producto_Real3
 	
@@ -119,6 +125,7 @@ public class Producto {
      */
 
 	public double potencia_Numero(double base, int exponente) {
+		potenciaNumero=Math.pow(base, exponente);
 		return potenciaNumero;
 
 	}//Cierre función potencia_Numero
