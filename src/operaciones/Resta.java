@@ -43,7 +43,10 @@ public class Resta {
 	 *         Numero negativo. {@link Exception#getLocalizedMessage()}
      */
 	public double resta_Real(double num1, double num2) throws Exception {
-
+		restaR = num1 - num2;
+		if(restaR < 0) {
+			throw new Exception("ERROR");
+		}
 		return restaR;
 	}
 
@@ -57,7 +60,10 @@ public class Resta {
 	 *         Numero negativo. {@link Exception#getLocalizedMessage()}
      */
 	public int resta_Dos_Entero(int num1, int num2) throws Exception {
-
+		restaE = num1 - num2;
+		if(restaE < 0) {
+			throw new Exception("ERROR");
+		}
 		return restaE;
 	}
 	
@@ -72,7 +78,10 @@ public class Resta {
 	 *         Numero negativo. {@link Exception#getLocalizedMessage()}
      */
 	public double resta_Tres_Real(double num1, double num2, double num3) throws Exception {
-
+		restaR2 = num1 - num2 - num3;
+		if(restaR2 < 0) {
+			throw new Exception("ERROR");
+		}
 		return restaR2;
 	}
 	
@@ -85,7 +94,47 @@ public class Resta {
 	 *         Numero negativo. {@link Exception#getLocalizedMessage()}
      */
 	public void acumular(double num1) throws Exception {
+		if (acumulado == 0) {
+			acumulado = num1;
+		} else {
+			acumulado -= num1;
+		}
 		
+		if(acumulado < 0) {
+			acumulado = 0;
+		}
+	}
+
+	public double getRestaR() {
+		return restaR;
+	}
+
+	public void setRestaR(double restaR) {
+		this.restaR = restaR;
+	}
+
+	public int getRestaE() {
+		return restaE;
+	}
+
+	public void setRestaE(int restaE) {
+		this.restaE = restaE;
+	}
+
+	public double getRestaR2() {
+		return restaR2;
+	}
+
+	public void setRestaR2(double restaR2) {
+		this.restaR2 = restaR2;
+	}
+
+	public double getAcumulado() {
+		return acumulado;
+	}
+
+	public void setAcumulado(double acumulado) {
+		this.acumulado = acumulado;
 	}
 
 }

@@ -37,7 +37,149 @@ public class Principal {
 				
 			case 2:// Se ha seleccionado en el menu calculadora la operacion
 					// RESTA
+				boolean salir2 = false;
+				while (!salir2) {
+					// Presentamos el submenu para escoger opciones del producto
+					System.out.println("Operación Resta a realizar:");
+					System.out.println("1.Resta de dos números reales");
+					System.out.println("2.Resta de dos números enteros");
+					System.out.println("3.Resta de tres números reales");
+					System.out.println("4.Resta del valor acumulado");
+					System.out.println("5.Volver a calculadora");
+					// Recogemos la opcion que escogemos mediante la variable
+					// subopcion
+					subopcion = sc.nextInt();
+					/*
+					 * Con esa variable y con otro switch case seleccionamos la
+					 * operación a realizar.
+					 */
+					switch (subopcion) {
+					case 1:// Se ha seleccionado en el submenu Resta la
+							// operacion resta de 2 Reales
+						try {// El bloque try-catch nos captura si introducimos
+								// cadena en vez de número
+							System.out.println("Dame el primer número real");
+							double numero1 = sc.nextDouble();
+							System.out.println("Dame el segundo número real");
+							double numero2 = sc.nextDouble();
+							/*
+							 * Despues de introducir los valores correctos,
+							 * calculamos el resultado mediante el metodo
+							 * adecuado.
+							 */
+							System.out.println("RESULTADO = "
+									+ r1.resta_Real(numero1, numero2));
+						} catch (Exception e) {
+							salir2 = true;
+							salir=true;/*
+										 * Aqui es donde capturamos la excepcion
+										 * de introducir cadena y salir del
+										 * bucle
+										 */
+							System.out
+									.println("ERROR\n"
+											+ "FIN DEL PROGRAMA");
+							//System.exit(0);
+						}
+						break;
+					case 2:// Se ha seleccionado en el submenu Resta la
+							// operacion resta de 2 Enteros
+						try {// El bloque try-catch nos captura si introducimos
+								// cadena en vez de número
+							System.out.println("Dame el primer número entero");
+							int numero11 = sc.nextInt();
+							System.out.println("Dame el segundo número entero");
+							int numero21 = sc.nextInt();
+							/*
+							 * Despues de introducir los valores correctos,
+							 * calculamos el resultado mediante el metodo
+							 * adecuado.
+							 */
+							System.out.println("RESULTADO = "
+									+ r1.resta_Dos_Entero(numero11, numero21));
+						} catch (Exception e) {
+							salir = true;
+							salir2 = true;/*
+										 * Aqui es donde capturamos la excepcion
+										 * de introducir cadena y salir del
+										 * bucle
+										 */
+							System.out
+							.println("ERROR\n"
+									+ "FIN DEL PROGRAMA");
 
+						}
+						break;
+					case 3:// Se ha seleccionado en el submenu Resta la
+							// operacion resta de 3 Reales
+						try {// El bloque try-catch nos captura si introducimos
+								// cadena en vez de número
+							System.out.println("Dame el primer número real");
+							double numero111 = sc.nextDouble();
+							System.out.println("Dame el segundo número real");
+							double numero211 = sc.nextDouble();
+							System.out.println("Dame el tercer número real");
+							double numero3 = sc.nextDouble();
+							/*
+							 * Despues de introducir los valores correctos,
+							 * calculamos el resultado mediante el metodo
+							 * adecuado.
+							 */
+							System.out.println("RESULTADO = "
+									+ r1.resta_Tres_Real(numero111, numero211,
+											numero3));
+						} catch (Exception e) {
+							salir = true;
+							salir2 = true;/*
+										 * Aqui es donde capturamos la excepcion
+										 * de introducir cadena y salir del
+										 * bucle
+										 */
+							System.out
+							.println("ERROR\n"
+									+ "FIN DEL PROGRAMA");
+						}
+						break;
+					case 4:// Se ha seleccionado en el submenu Resta la
+							// operacion resta del valor acumulado
+						try {// El bloque try-catch nos captura si introducimos
+								// cadena en vez de número
+							System.out
+									.println("Dame el numero real");
+							double numReal = sc.nextDouble();
+							/*
+							 * Despues de introducir los valores correctos,
+							 * calculamos el resultado mediante el metodo
+							 * adecuado.
+							 */
+							r1.acumular(numReal);
+							System.out.println("RESULTADO = "
+									+ Math.abs(r1.getAcumulado()));
+						} catch (Exception e) {
+							salir = true;
+							salir2 = true;/*
+										 * Aqui es donde capturamos la excepcion
+										 * de introducir cadena y salir del
+										 * bucle
+										 */
+							System.out
+							.println("ERROR\n"
+									+ "FIN DEL PROGRAMA");
+						}
+						break;
+					case 5:// Se ha seleccionado en el submenu Resta la
+							// operacion Salir y volver a calculadora
+						System.out.println("Pulsado volver a calculadora");
+						salir2 = true;
+						break;
+						
+					default://Se ha introducido un valor erroneo en el submenu
+						System.out
+								.println("Opcion incorrecta.Introduce una opción correcta");
+						
+					}//Cierre switch submenu Producto
+				}//Cierre while submenu Producto
+				break;
 			
 			
 			
