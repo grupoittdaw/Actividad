@@ -1,0 +1,46 @@
+package suma;
+
+
+
+/**
+ * 
+ * @author Diego Llive
+ *
+ */
+
+
+public class Suma {
+
+	
+	/**
+	 * 
+	 * @param args
+	 * define un parametro y es requerido por todos los paràmetros del mètodo 
+	 */
+	
+	
+	public static void main(String[] args) {
+		
+		
+		 
+		 
+		
+		Operaciones calculo = new Operaciones () ; // Objeto de tipo operaciones 
+		
+		int sum = calculo.suma_enteros(4, 600) ;  //  Variable  de se llama al metodo de la suma de numero enteros  
+		System.out.println("el resultado es " + sum); // Se imprime en pantalla el resultado de la suma 
+		
+		
+		double sumr = calculo.suma_reales(3.59 , 7.987) ; // Variable para llamar al metodo de la suma de 2 numeros reales
+		System.out.println("el resultado es " + sumr); // Se imprime en pantalla el resultado de la suma 
+
+		double sumr3 = calculo.suma_3reales(4.5, 8.9, 9.8) ; // Variable para llamar al metodo de la suma de 3 numeros reales  
+		System.out.println("el resultado es " + sumr3);  // Se imprime en pantalla el resultado de la suma 
+		
+		
+		int valor = calculo.valor_acumulado(5) ;   
+		System.out.println("el resultado es " + valor);
+		
+	}
+
+}

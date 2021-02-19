@@ -1,0 +1,92 @@
+package suma;
+
+/**
+ * 
+ * @author Diego Llive
+ *
+ */
+
+
+
+public class Operaciones {
+
+	Operaciones () {} ; 	
+	
+/**
+ * Construcor , permite realizar los metodos para las operaciones . 
+ */
+	                               
+	                          
+
+		
+		
+	/**
+	 * 
+	 * @param a 
+	 * @param b 
+	 * @return devuelve el  valor de la suma 
+	 */
+		
+ public int suma_enteros (int a , int b) { // mètodo que nos devuele un valor entero , con los parametros a y b 
+	  
+	  int totals ;
+	  	totals = a+b ;
+	  	return totals ; 
+  }
+	
+ /**
+  * 
+  * @param a
+  * @param b
+  * @return devuelve el valor de la suma 
+  */
+ 
+  public double suma_reales (double a , double b) { // mètodo que nos devuelve un valor decimal , con los parametros a y b 
+	  
+	  int totalr ; 
+	  	totalr = (int) ((int) a+b) ;
+	  	return totalr ;
+	  }
+  
+  
+  /**
+   * 
+   * @param a
+   * @param b
+   * @param c
+   * @return devuelve el valor de la suma 
+   */
+  
+  public double suma_3reales (double a , double b , double c) { // mètodo que nos devuelve un valor decimal , con los parametros a , b y c
+	  
+	  int totalr3 ;
+	  totalr3 = (int) ((int) a+b+c) ;
+	  return totalr3 ; 
+  }
+  
+  
+  /**
+   * 
+   * @param a
+   * @return
+   */
+  public int valor_acumulado (int a) {
+	  
+	  int totalv ;
+	  totalv = a ;
+	  
+	  int Sumatorio = 0 ;
+	  int Contador = 0 ;
+	  
+	  while (Contador !=0) {
+		  
+		  Sumatorio = Sumatorio + Contador ; 
+		  Contador -- ; 
+		  
+		  
+	  }
+	  
+	  return totalv ; 
+  }
+  
+}
